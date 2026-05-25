@@ -6,6 +6,11 @@
     <title>Emile's Restaurant Website/home</title>
 
     <style>
+        body {
+            background-color: rgb(38, 38, 38);
+            margin: 0;
+        }
+
         #heading {
             background-color: orange;
         }
@@ -36,6 +41,16 @@
             color: orange;
         }
 
+        .types-divs {
+            display: none;
+            color: white;
+            padding: 20px;
+        }
+
+        #home-div {
+            display: block;
+        }
+
         @media (max-width: 900px) {
             #main_h1 {
                 font-size: 220%;
@@ -47,20 +62,95 @@
                 font-size: 20px;
             }
         }
-        
     </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let home = document.getElementById("home-div");
+            let plates = document.getElementById("plates-div");
+            let sandwiches = document.getElementById("sandwitches-div");
+            let deals = document.getElementById("deals-div");
+            let drinks = document.getElementById("drinks-div");
+            let deserts = document.getElementById("deserts-div");
+
+            function hideAll() {
+                home.style.display = "none";
+                plates.style.display = "none";
+                sandwiches.style.display = "none";
+                deals.style.display = "none";
+                drinks.style.display = "none";
+                deserts.style.display = "none";
+            }
+
+            document.getElementById("home").onclick = function () {
+                hideAll();
+                home.style.display = "block";
+            };
+
+            document.getElementById("plates").onclick = function () {
+                hideAll();
+                plates.style.display = "block";
+            };
+
+            document.getElementById("Sandwiches").onclick = function () {
+                hideAll();
+                sandwiches.style.display = "block";
+            };
+
+            document.getElementById("deals").onclick = function () {
+                hideAll();
+                deals.style.display = "block";
+            };
+
+            document.getElementById("drinks").onclick = function () {
+                hideAll();
+                drinks.style.display = "block";
+            };
+
+            document.getElementById("deserts").onclick = function () {
+                hideAll();
+                deserts.style.display = "block";
+            };
+        });
+    </script>
 </head>
-<body style="background-color: rgb(38, 38, 38);">
+
+<body>
     <div id="heading">
-        <h1 id="main_h1"><b><U>Emile's Restaurant Website</U></b></h1>
+        <h1 id="main_h1"><b><u>Emile's Restaurant Website</u></b></h1>
     </div>
-    
+
     <div id="menu-types-buttons">
+        <button id="home" class="types">Home</button>
         <button id="plates" class="types">Plates</button>
-        <button id="Sandwitches" class="types">Sandwitches</button>
+        <button id="Sandwiches" class="types">Sandwiches</button>
         <button id="deals" class="types">Deals</button>
         <button id="drinks" class="types">Drinks</button>
         <button id="deserts" class="types">Deserts</button>
+    </div>
+
+    <div id="home-div" class="types-divs">
+        1
+    </div>
+
+    <div id="plates-div" class="types-divs">
+        2
+    </div>
+
+    <div id="sandwitches-div" class="types-divs">
+        3
+    </div>
+
+    <div id="deals-div" class="types-divs">
+        4
+    </div>
+
+    <div id="drinks-div" class="types-divs">
+        5
+    </div>
+
+    <div id="deserts-div" class="types-divs">
+        6
     </div>
 </body>
 </html>
