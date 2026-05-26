@@ -31,6 +31,10 @@
             margin: auto;
         }
 
+        h2 {
+            color: orange;
+        }
+
         .types {
             height: 70px;
             width: 230px;
@@ -66,6 +70,12 @@
             font-size: large;
         }
 
+        .separator {
+            width: 3px;
+            background-color: orange;
+            margin: 0 20px;
+        }
+
         @media (max-width: 900px) {
             #main_h1 {
                 font-size: 220%;
@@ -75,6 +85,19 @@
                 height: 40px;
                 width: 200px;
                 font-size: 20px;
+            }
+
+            #home-div {
+                flex-direction: column;
+            }
+
+            #resto-exterior-img {
+                height: 100%;
+                width: 70%;
+            }
+
+            .separator {
+                display: none;
             }
         }
     </style>
@@ -99,32 +122,32 @@
 
             document.getElementById("home").onclick = function () {
                 hideAll();
-                home.style.display = "block";
+                home.style.display = "flex";
             };
 
             document.getElementById("plates").onclick = function () {
                 hideAll();
-                plates.style.display = "block";
+                plates.style.display = "flex";
             };
 
             document.getElementById("Sandwiches").onclick = function () {
                 hideAll();
-                sandwiches.style.display = "block";
+                sandwiches.style.display = "flex";
             };
 
             document.getElementById("deals").onclick = function () {
                 hideAll();
-                deals.style.display = "block";
+                deals.style.display = "flex";
             };
 
             document.getElementById("drinks").onclick = function () {
                 hideAll();
-                drinks.style.display = "block";
+                drinks.style.display = "flex";
             };
 
             document.getElementById("deserts").onclick = function () {
                 hideAll();
-                deserts.style.display = "block";
+                deserts.style.display = "flex";
             };
         });
     </script>
@@ -161,11 +184,14 @@
                 <li>Reservation fee (outside): 8$</li>
             </ul>
         </div>
+
+        <div class="separator"></div>
+
         <div class="content">
             <h2><u>Social Media:</u></h2>
             <ul>
-                <li>Facebook: @Emiles-restaurant</li>
-                <li>instagram: @Emiles-resto11</li>
+                <li>Facebook:<br>@Emiles-restaurant</li>
+                <li>instagram:<br>@Emiles-resto11</li>
             </ul>
         </div>
     </div>
