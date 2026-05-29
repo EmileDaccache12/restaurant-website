@@ -55,6 +55,7 @@
 
         #home-div {
             display: flex;
+            justify-content: flex-start;
         }
 
         #resto-exterior-img {
@@ -64,7 +65,6 @@
         }
 
         .home-content {
-            margin-left: 20px;
             font-size: large;
         }
 
@@ -84,8 +84,16 @@
             width: 312px;
             height: 290px;
             background-color: orange;
-            margin: 20px 0 0 20px
-            
+            margin: 12px 0 0 12px;
+            text-align: center;
+            color: black;
+            font-size: 150%;
+        }
+
+        .images {
+            width: 100%;
+            height: auto;
+            border: 1px solid black;
         }
 
         @media (max-width: 900px) {
@@ -218,7 +226,10 @@
     </div>
 
     <div id="plates-div" class="types-divs">
-        <div class="sections"></div>
+        <div class="sections">
+            <img src="resto-plate1.jfif" class="images">
+            <p><b>chicken strips: 9$</b></p>
+        </div>
         <div class="sections"></div>
         <div class="sections"></div>
         <div class="sections"></div>
@@ -229,7 +240,14 @@
     </div>
 
     <div id="sandwitches-div" class="types-divs">
-        3
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
     </div>
 
     <div id="deals-div" class="types-divs">
@@ -237,11 +255,25 @@
     </div>
 
     <div id="drinks-div" class="types-divs">
-        5
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
     </div>
 
     <div id="deserts-div" class="types-divs">
-        6
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
+        <div class="sections"></div>
     </div>
 </body>
 </html>
