@@ -35,6 +35,10 @@
             color: orange;
         }
 
+        #home {
+            box-shadow: 3px 3px 10px black;
+        }
+
         .types {
             height: 70px;
             width: 230px;
@@ -45,11 +49,15 @@
             color: orange;
         }
 
+        .types:hover {
+            cursor: pointer;
+            transform: scale(1.002);
+        }
+
         .types-divs {
             display: none;
             flex-wrap: wrap;
             justify-content: center;
-
             color: white;
             padding: 20px;
         }
@@ -97,7 +105,7 @@
             border: 1px solid black;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
             #main_h1 {
                 font-size: 220%;
             }
@@ -141,6 +149,13 @@
             let drinks = document.getElementById("drinks-div");
             let deserts = document.getElementById("deserts-div");
 
+            let home_btn = document.getElementById("home");
+            let plates_btn = document.getElementById("plates");
+            let sandwiches_btn = document.getElementById("Sandwiches");
+            let deals_btn = document.getElementById("deals");
+            let drinks_btn = document.getElementById("drinks");
+            let deserts_btn = document.getElementById("deserts");
+
             function hideAll() {
                 home.style.display = "none";
                 plates.style.display = "none";
@@ -148,36 +163,49 @@
                 deals.style.display = "none";
                 drinks.style.display = "none";
                 deserts.style.display = "none";
+
+                home_btn.style.boxShadow = "none";
+                plates_btn.style.boxShadow = "none";
+                sandwiches_btn.style.boxShadow = "none";
+                deals_btn.style.boxShadow = "none";
+                drinks_btn.style.boxShadow = "none";
+                deserts_btn.style.boxShadow = "none";
             }
 
             document.getElementById("home").onclick = function () {
                 hideAll();
                 home.style.display = "flex";
+                home_btn.style.boxShadow = "3px 3px 10px black";
             };
 
             document.getElementById("plates").onclick = function () {
                 hideAll();
                 plates.style.display = "flex";
+                plates_btn.style.boxShadow = "3px 3px 10px black";
             };
 
             document.getElementById("Sandwiches").onclick = function () {
                 hideAll();
                 sandwiches.style.display = "flex";
+                sandwiches_btn.style.boxShadow = "3px 3px 10px black";
             };
 
             document.getElementById("deals").onclick = function () {
                 hideAll();
                 deals.style.display = "block";
+                deals_btn.style.boxShadow = "3px 3px 10px black";
             };
 
             document.getElementById("drinks").onclick = function () {
                 hideAll();
                 drinks.style.display = "flex";
+                drinks_btn.style.boxShadow = "3px 3px 10px black";
             };
 
             document.getElementById("deserts").onclick = function () {
                 hideAll();
                 deserts.style.display = "flex";
+                deserts_btn.style.boxShadow = "3px 3px 10px black";
             };
         });
     </script>
@@ -200,7 +228,7 @@
     <div id="home-div" class="types-divs">
         <img src="restaurant-exterior.jpg" alt="restaurant image" id="resto-exterior-img">
 
-        <div class="content">
+        <div class="home-content">
             <h2><u>Opening Dates/Opening Time:</u></h2>
             <ul>
                 <li>Monday => Saturday</li>
